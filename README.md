@@ -19,12 +19,10 @@ Make sure you have Node 0.10.x installed and then...
 
 Make sure you've installed the Heroku toolbelt and then...
 
-1. Clone this repo with `git clone https://github.com/frxnz/herro-ku.git`
+1. Add the Heroku remote with `heroku git:remote -a guarded-taiga-7605`
 
-2. Add the Heroku remote with `heroku git:remote`
+2. Push changes to Heroku* with `git push heroku master`
 
-3. Push changes to Heroku* with `git push heroku master`
-
-4. Open the Heroku site with `heroku open`
+3. Open the Heroku site with `heroku open`
 
 **Make sure you also push to GitHub when you've made changes with `git push origin master`*
