@@ -21,8 +21,8 @@ Make sure you've installed the Heroku toolbelt and then...
 
 1. Add the Heroku remote with `heroku git:remote -a guarded-taiga-7605`
 
-2. Push changes to Heroku* with `git push heroku master`
+2. Push changes to Heroku and GitHub with `git push`*
 
 3. Open the Heroku site with `heroku open`
 
-**Make sure you also push to GitHub when you've made changes with `git push origin master`*
+* To push to only Heroku use `git push heroku master`. To push to only GitHub use `git push origin master`
