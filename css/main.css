@@ -97,6 +97,44 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    font-size: 2.5em;
+    background: #f7f7f7;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 30em;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.button {
+    padding: 2em;
+    border: 0;
+    background: tomato;
+    font-weight: bold;
+    color: white;
+    -webkit-appearance: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.current-temp {
+    margin: 1em;
+}
+
+.current-temp:before {
+    content: 'Current Temp: ';
+    font-size: 0.75em;
+    text-transform: lowercase;
+    color: #888;
+}
 
 
 
@@ -222,13 +260,6 @@ textarea {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
