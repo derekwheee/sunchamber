@@ -1,28 +1,20 @@
-Herro, Ku!
+Sunchamber
 ==========
 
-## Installation
+### What is this?
 
-I'm working on it, guys.
+Sunchamber is a Node/Socket.io web application. I use it in conjunction with
+[arduino](https://github.com/frxnz/arduino) to monitor the temperature of my
+apartment and turn my air conditioner on and off.
 
-### Local
-Make sure you have Node 0.10.x installed and then...
+### How does it work?
+Sunchamber is a websocket server that lives on The Internet. I run a Node
+websocket client on my local machine. The client uses
+[johnny-five](https://github.com/rwaldron/johnny-five) to control an Arduino.
+The Arduino has a temperature sensor for monitor temperature, and a relay for
+controlling the air conditioner.
 
-1. Clone this repo with `git clone https://github.com/frxnz/herro-ku.git`
+The whole setup is written 100% in JavaScript.
 
-2. Install Node dependencies with `npm install`
-
-3. Start app with `node server`
-
-### Heroku Remote
-*Only collaborators can access the Heroku remote*
-
-Make sure you've installed the Heroku toolbelt and then...
-
-1. Add the Heroku remote with `heroku git:remote -a guarded-taiga-7605`
-
-2. Push changes to Heroku and GitHub with `git push`*
-
-3. Open the Heroku site with `heroku open`
-
-* To push to only Heroku use `git push heroku master`. To push to only GitHub use `git push origin master`
+### Can I control your air conditioner?
+Technically you could, but usually I'm not actually running the Node client.
