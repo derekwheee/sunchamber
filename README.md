@@ -1,14 +1,14 @@
-Sunchamber
+The Sun Chamber
 ==========
 
 ### What is this?
 
-Sunchamber is a Node/Socket.io web application. I use it in conjunction with
+The Sun Chamber is a Node/Socket.io web application. I use it in conjunction with
 [arduino](https://github.com/frxnz/arduino) to monitor the temperature of my
 apartment and turn my air conditioner on and off.
 
 ### How does it work?
-Sunchamber is a websocket server that lives on The Internet. I run a Node
+The Sun Chamber is a websocket server that lives on The Internet. I run a Node
 websocket client on my local machine. The client uses
 [johnny-five](https://github.com/rwaldron/johnny-five) to control an Arduino.
 The Arduino has a temperature sensor for monitor temperature, and a relay for
