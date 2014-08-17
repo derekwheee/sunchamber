@@ -14,15 +14,22 @@
         <div class="container">
 
             <script type="text/x-handlebars">
-                <h1>The Sun Chamber</h1>
+                <header>
+                    <h1>The Sun Chamber</h1>
+                </header>
 
                 {{outlet}}
+
+                <footer>
+                </footer>
             </script>
 
             <script type="text/x-handlebars" id="index">
-                <div class="current-temp">current temp: {{value}}</div>
+                <div class="index">
+                    <div class="current-temp">current temp: <strong>{{value}}&deg;</strong></div>
 
-                <button class="ac-toggle button">Turn A/C On</button>
+                    <button class="ac-toggle button">Turn A/C On</button>
+                </div>
             </script>
 
         </div>

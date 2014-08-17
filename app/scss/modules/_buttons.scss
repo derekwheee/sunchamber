@@ -1,0 +1,17 @@
+.button {
+    padding: 0.5em 1em;
+    border: 0;
+    background: $c-base;
+    text-align: center;
+    color: $c-base-contrast;
+
+    &.ac-toggle {
+        display: block;
+        margin: 1em auto 0;
+        font-size: 1.5em;
+
+        @include bp(medium) {
+            font-size: 2em;
+        }
+    }
+}

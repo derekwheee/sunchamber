@@ -19,13 +19,11 @@ io.on('connection', function (socket) {
     socket.emit('ac-status', acStatus);
 
     socket.on('ac', function (data) {
-        console.log(data);
         acStatus = data;
         io.emit('ac-status', acStatus);
     });
 
     socket.on('new-temp', function (data) {
-        console.log(data);
         io.emit('current-temp', data);
     });
 

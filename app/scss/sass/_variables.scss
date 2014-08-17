@@ -1,0 +1,29 @@
+// Colors
+$c-base: #ff6347;
+$c-base-lighter: #ff7960;
+$c-base-darker: #b23620;
+$c-base-contrast: #fff;
+$c-complement: #0eb26d;
+$c-complement-lighter: #47ffb1;
+$c-complement-contrast: #fff;
+$c-primary: #f7f7f7;
+$c-primary-contrast: #333;
+
+// Breakpoints map
+// @type Map
+$breakpoints: (
+    // Regular breakpoints
+    'medium'  : '(min-width: 700px)',
+    'large'   : '(min-width: 1000px)',
+    'huge'    : '(min-width: 1300px)',
+    'godzila' : '(min-width: 1600px)',
+
+    // Exclusive breakpoints
+    'small-only'  : '(max-width: 699px)',
+    'medium-only' : '(min-width: 700px) and (max-width: 999px)',
+    'large-only'  : '(min-width: 1000px) and (max-width: 1299px)',
+    'huge-only'   : '(min-width: 1300px) and (max-width: 1599px)',
+
+    // Extra breakpoints
+    'iOS' : '(min-device-width: 768px) and (max-device-width: 1024px), (max-device-width: 480px)'
+) !default;

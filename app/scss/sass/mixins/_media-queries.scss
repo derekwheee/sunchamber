@@ -1,0 +1,21 @@
+// Enable/disable media queries
+// @type Bool
+$media-queries-enabled: true !default;
+
+// Output a media query named after `$point`.
+// @param {String} $point
+// @requires $breakpoints
+// @requires $MQs
+@mixin bp($point) {
+    $query: map-get($breakpoints, $point);
+
+    @if not $query {
+        @warn "Oh shit! You are requesting an invalid breakpoint: `#{$point}`. :(";
+    }
+
+    @else if $media-queries-enabled {
+        @media #{$query} {
+            @content;
+        }
+    }
+}

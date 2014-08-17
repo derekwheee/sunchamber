@@ -1,2 +1,17 @@
+// Sass
+@import 'sass/variables',
+        'sass/mixins/media-queries';
+
 // Vendor
 @import 'vendor/normalize';
+
+// Global
+@import 'global/layout';
+
+// Views
+@import 'views/index';
+
+// Modules
+@import 'modules/header',
+        'modules/current-temp',
+        'modules/buttons';

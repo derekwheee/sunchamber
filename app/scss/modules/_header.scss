@@ -1,0 +1,15 @@
+header {
+    padding: 2em 0;
+    background: $c-complement;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-size: 1.5em;
+        color: $c-complement-lighter;
+
+        @include bp(medium) {
+            font-size: 2em;
+        }
+    }
+}

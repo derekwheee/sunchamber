@@ -1,0 +1,238 @@
+# Default application configuration that all configurations inherit from.
+linters:
+  BorderZero:
+    enabled: true
+
+  CapitalizationInSelector:
+    enabled: true
+
+  ColorKeyword:
+    enabled: false
+
+  Comment:
+    enabled: true
+
+  DebugStatement:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: true
+
+  DuplicateProperty:
+    enabled: true
+
+  ElsePlacement:
+    enabled: true
+    style: same_line # or 'new_line'
+
+  EmptyLineBetweenBlocks:
+    enabled: true
+    ignore_single_line_blocks: true
+
+  EmptyRule:
+    enabled: true
+
+  FinalNewline:
+    enabled: true
+    present: true
+
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+
+  HexValidation:
+    enabled: true
+
+  IdWithExtraneousSelector:
+    enabled: true
+
+  Indentation:
+    enabled: true
+    character: space # or 'tab'
+    width: 4
+
+  LeadingZero:
+    enabled: true
+    style: include_zero # or 'include_zero'
+
+  MergeableSelector:
+    enabled: true
+    force_nesting: true
+
+  NameFormat:
+    enabled: true
+    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+
+  PlaceholderInExtend:
+    enabled: true
+
+  PropertySortOrder:
+    enabled: true
+    ignore_unspecified: true
+    order:
+        - content
+
+        - display
+        - position
+        - top
+        - left
+        - right
+        - bottom
+
+        - width
+        - min-width
+        - max-width
+
+        - height
+        - min-height
+        - max-height
+
+        - margin
+        - margin-top
+        - margin-right
+        - margin-bottom
+        - margin-left
+
+        - padding
+        - padding-top
+        - padding-right
+        - padding-bottom
+        - padding-left
+
+        - outline
+
+        - border
+        - border-top
+        - border-right
+        - border-bottom
+        - border-left
+        - border-width
+        - border-top-width
+        - border-right-width
+        - border-bottom-width
+        - border-left-width
+
+        - border-style
+        - border-top-style
+        - border-right-style
+        - border-bottom-style
+        - border-left-style
+
+        - border-radius
+        - border-top-left-radius
+        - border-top-right-radius
+        - border-bottom-left-radius
+        - border-bottom-right-radius
+
+        - border-color
+        - border-top-color
+        - border-right-color
+        - border-bottom-color
+        - border-left-color
+
+        - box-shadow
+
+        - background
+        - background-color
+        - background-image
+        - background-repeat
+        - background-position
+        - background-size
+
+        - font
+        - font-family
+        - font-size
+        - font-weight
+        - font-smoothing
+        - font-style
+
+        - line-height
+        - word-spacing
+        - letter-spacing
+        - white-space
+
+        - text-align
+        - text-indent
+        - text-transform
+        - text-decoration
+        - text-rendering
+        - text-shadow
+        - text-overflow
+
+        - color
+
+        - float
+        - clear
+
+        - overflow
+
+        - visibility
+        - opacity
+        - z-index
+        - transform
+        - transition
+
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 3
+
+  Shorthand:
+    enabled: true
+
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: true
+
+  SingleLinePerSelector:
+    enabled: true
+
+  SpaceAfterComma:
+    enabled: true
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  SpaceAfterPropertyName:
+    enabled: true
+
+  SpaceBeforeBrace:
+    enabled: true
+    allow_single_line_padding: false
+
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  StringQuotes:
+    enabled: true
+    style: single_quotes # or double_quotes
+
+  TrailingSemicolon:
+    enabled: true
+
+  UnnecessaryMantissa:
+    enabled: true
+
+  UnnecessaryParentReference:
+    enabled: true
+
+  UrlFormat:
+    enabled: true
+
+  UrlQuotes:
+    enabled: true
+
+  ZeroUnit:
+    enabled: true
+
+  Compass::*:
+    enabled: false

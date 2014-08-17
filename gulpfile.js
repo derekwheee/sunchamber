@@ -8,7 +8,7 @@ var gulp     = require('gulp'),
     scsslint = require('gulp-scss-lint');
 
 // Compile Sass with Source Maps
-gulp.task('sass-dev', ['scss-lint'], function () {
+gulp.task('sass-dev', ['clean-css', 'scss-lint'], function () {
 
     console.log('[sass]'.bold.magenta + ' Compiling Sass');
 
@@ -34,7 +34,19 @@ gulp.task('scss-lint', function() {
     console.log('[sass]'.bold.magenta + ' Compiling Sass');
 
     return gulp.src(['./app/scss/**/*.scss', '!./app/scss/vendor/**/*.scss'])
-        .pipe(scsslint());
+        .pipe(scsslint({
+            config: 'sass-lint.yml'
+        }));
+});
+
+// Delete compiled CSS
+gulp.task('clean-css', function () {
+
+    console.log('[clean-css]'.bold.magenta + ' Deleting compiled CSS files');
+
+    return gulp.src(['./app/css/**/*.css', './app/css/**/*.css.map'], { read: false })
+        .pipe(rimraf());
+
 });
 
 // Watch files for changes

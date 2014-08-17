@@ -1,0 +1,9 @@
+.current-temp {
+    font-size: 2em;
+    color: lighten($c-primary-contrast, 40%);
+
+    strong {
+        font-size: 1.5em;
+        color: $c-base;    
+    }
+}
