@@ -4,8 +4,8 @@ SUNCHAMBER.Router.map(function() {
 
 SUNCHAMBER.IndexRoute = Ember.Route.extend({
     model: function() {
-        return this.store.find('CurrentTemp').then(function (temp) {
-            return temp.objectAt(temp.get('length') - 1);
+        return this.store.find('Temperature').then(function (temp) {
+            return temp.sortBy('date').objectAt(temp.get('length') - 1);
         });
     }
 });

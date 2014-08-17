@@ -1,9 +1,9 @@
-SUNCHAMBER.CurrentTemp = DS.Model.extend({
+SUNCHAMBER.Temperature = DS.Model.extend({
   date : DS.attr('date'),
   value : DS.attr('number')
 });
 
-SUNCHAMBER.CurrentTemp.FIXTURES = [
+SUNCHAMBER.Temperature.FIXTURES = [
     {
         id    : 1,
         date  : new Date("2014-08-16T21:00:00"),
