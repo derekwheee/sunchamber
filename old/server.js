@@ -12,7 +12,7 @@ server.listen(port, function() {
     console.log("Listening on " + port);
 });
 
-app.use(express.static(__dirname + '/app/'));
+app.use(express.static(__dirname + '/'));
 
 io.on('connection', function (socket) {
 
