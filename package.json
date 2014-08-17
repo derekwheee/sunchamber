@@ -1,6 +1,6 @@
 {
   "name": "sunchamber",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The Sun Chamber",
   "private": true,
   "main": "server.js",
@@ -29,5 +29,8 @@
     "express": "^4.4.5",
     "socket.io": "^1.0.6"
   },
-  "subdomain": "sunchamber"
+  "subdomain": "sunchamber",
+  "domains": [
+    "j5.omit.io"
+  ],
 }
