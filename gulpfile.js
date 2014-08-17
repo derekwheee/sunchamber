@@ -1,13 +1,14 @@
-var gulp    = require('gulp'),
-    beep    = require('beepbeep'),
-    plumber = require('gulp-plumber'),
-    sass    = require('gulp-ruby-sass'),
-    prefix  = require('gulp-autoprefixer'),
-    rimraf  = require('gulp-rimraf'),
-    colors  = require('colors');
+var gulp     = require('gulp'),
+    beep     = require('beepbeep'),
+    plumber  = require('gulp-plumber'),
+    sass     = require('gulp-ruby-sass'),
+    prefix   = require('gulp-autoprefixer'),
+    rimraf   = require('gulp-rimraf'),
+    colors   = require('colors'),
+    scsslint = require('gulp-scss-lint');
 
 // Compile Sass with Source Maps
-gulp.task('sass-dev', function () {
+gulp.task('sass-dev', ['scss-lint'], function () {
 
     console.log('[sass]'.bold.magenta + ' Compiling Sass');
 
@@ -25,6 +26,15 @@ gulp.task('sass-dev', function () {
         }))
         .pipe(prefix())
         .pipe(gulp.dest('./app/css'));
+});
+
+// Lint Sass files
+gulp.task('scss-lint', function() {
+
+    console.log('[sass]'.bold.magenta + ' Compiling Sass');
+
+    return gulp.src(['./app/scss/**/*.scss', '!./app/scss/vendor/**/*.scss'])
+        .pipe(scsslint());
 });
 
 // Watch files for changes
