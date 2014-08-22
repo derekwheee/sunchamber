@@ -1,27 +1,32 @@
 var socket = io.connect('http://' + location.host),
-    toggleButton = function (status) {
-        var $button = $('.ac-toggle'),
-            text = status === 'on' ? 'Off' : 'On';
+    state = {
+      in1: 1,
+      in2: 0
+    },
+    toggleButton = function (relay) {
+        var $button = $('.' + relay),
+            text = state[relay] ? 'Off' : 'On';
 
-        if (status === 'on') {
+        if (state[relay]) {
             $button.addClass('on');
         } else {
             $button.removeClass('on');
         }
 
-        $button.text('Turn A/C ' + text);
-    }
+        $button.text('Turn ' + text);
+    };
 
-socket.on('ac-status', function (data) {
-    toggleButton(data.status);
+toggleButton('in1');
+toggleButton('in2');
+
+$('.in1').click(function () {
+    state.in1 = state.in1 ? 0 : 1;
+    toggleButton('in1');
+    socket.emit('in1', state.in1);
 });
 
-socket.on('current-temp', function (data) {
-    $('.current-temp').text(data.f);
-});
-
-$('.ac-toggle').click(function () {
-    var acStatus = $(this).hasClass('on') ? 'off' : 'on';
-    toggleButton(acStatus);
-    socket.emit('ac', { status: acStatus });
+$('.in2').click(function () {
+    state.in2 = state.in2 ? 0 : 1;
+    toggleButton('in2');
+    socket.emit('in2', state.in2);
 });

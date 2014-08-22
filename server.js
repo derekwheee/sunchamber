@@ -4,8 +4,9 @@ var express = require('express');
     io      = require('socket.io')(server),
     port    = Number(process.env.PORT || 5000),
 
-    acStatus = {
-        status : 'off'
+    status = {
+        in1 : 1,
+        in2 : 0
     };
 
 server.listen(port, function() {
@@ -16,17 +17,17 @@ app.use(express.static(__dirname + '/'));
 
 io.on('connection', function (socket) {
 
-    socket.emit('ac-status', acStatus);
+    socket.emit('in1', status.in1);
+    socket.emit('in2', status.in2);
 
-    socket.on('ac', function (data) {
-        console.log(data);
-        acStatus = data;
-        io.emit('ac-status', acStatus);
+    socket.on('in1', function (data) {
+        status.in1 = data;
+        io.emit('in1', status.in1);
     });
 
-    socket.on('new-temp', function (data) {
-        console.log(data);
-        io.emit('current-temp', data);
+    socket.on('in2', function (data) {
+        status.in1 = data;
+        io.emit('in2', status.in1);
     });
 
 });
