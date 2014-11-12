@@ -1,6 +1,6 @@
 {
   "name": "sunchamber",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Sun Chamber",
   "private": true,
   "main": "server.js",
@@ -16,7 +16,7 @@
     "url": "https://github.com/frxnz/sunchamber.git"
   },
   "author": "Derek Wheelden",
-  "license": "GPL v2",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/frxnz/sunchamber/issues"
   },
